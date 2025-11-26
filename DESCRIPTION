@@ -52,6 +52,7 @@ Suggests:
     foreach,
     future,
     future.batchtools,
+    jsonlite,
     knitr,
     parallelMap,
     ranger,
@@ -66,4 +67,4 @@ ByteCompile: yes
 Encoding: UTF-8
 NeedsCompilation: yes
 Roxygen: list(r6 = FALSE)
-RoxygenNote: 7.3.2
+RoxygenNote: 7.3.3
