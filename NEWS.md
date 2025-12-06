@@ -1,7 +1,10 @@
+# batchtools (development version)
+
+* Fixed a bug in `Worker` initialization where the script path was not assigned for remote SSH hosts, causing `runOSCommand()` to fail with NULL argument.
+
 # batchtools 0.9.17
 
 * Fixed a bug in the finalizer of `ClusterFunctionsMulticore`.
-* Fixed a bug in `Worker` initialization where the script path was not assigned for remote SSH hosts, causing `runOSCommand()` to fail with NULL argument.
 
 # batchtools 0.9.16
 

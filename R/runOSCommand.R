@@ -23,16 +23,20 @@
 #' runOSCommand("ls", "-al")
 #' runOSCommand("notfound")
 #' }
-runOSCommand = function(sys.cmd, sys.args = character(0L), stdin = "", nodename = "localhost") {
+runOSCommand = function(
+  sys.cmd,
+  sys.args = character(0L),
+  stdin = "",
+  nodename = "localhost"
+) {
   assertCharacter(sys.cmd, any.missing = FALSE, len = 1L)
   assertCharacter(sys.args, any.missing = FALSE)
   assertString(nodename, min.chars = 1L)
 
   if (!isLocalHost(nodename)) {
     command = sprintf("%s %s", sys.cmd, stri_flatten(sys.args, " "))
-    # if (getRversion() < "4.0.0") {
+    # The shQuote'ing appears to be necessary even on R >= 4.5
     command = shQuote(command)
-    # }
     command = stri_replace_all_fixed(command, "\\$", "$")
     sys.args = c("-q", nodename, command)
     sys.cmd = "ssh"
@@ -41,7 +45,14 @@ runOSCommand = function(sys.cmd, sys.args = character(0L), stdin = "", nodename 
   "!DEBUG [runOSCommand]: cmd: `sys.cmd` `stri_flatten(sys.args, ' ')`"
 
   if (nzchar(Sys.which(sys.cmd))) {
-    res = suppressWarnings(system2(command = sys.cmd, args = sys.args, stdin = stdin, stdout = TRUE, stderr = TRUE, wait = TRUE))
+    res = suppressWarnings(system2(
+      command = sys.cmd,
+      args = sys.args,
+      stdin = stdin,
+      stdout = TRUE,
+      stderr = TRUE,
+      wait = TRUE
+    ))
     output = as.character(res)
     exit.code = attr(res, "status") %??% 0L
   } else {
@@ -52,7 +63,12 @@ runOSCommand = function(sys.cmd, sys.args = character(0L), stdin = "", nodename 
   "!DEBUG [runOSCommand]: OS result (stdin '`stdin`', exit code `exit.code`):"
   "!DEBUG [runOSCommand]: `paste0(output, sep = '\n')`"
 
-  return(list(sys.cmd = sys.cmd, sys.args = sys.args, exit.code = exit.code, output = output))
+  return(list(
+    sys.cmd = sys.cmd,
+    sys.args = sys.args,
+    exit.code = exit.code,
+    output = output
+  ))
 }
 
 isLocalHost = function(nodename) {
@@ -60,9 +76,16 @@ isLocalHost = function(nodename) {
 }
 
 OSError = function(msg, res) {
-  cmd = stri_flatten(c(res$sys.cmd, res$sys.args), collapse = " ") %??% NA_character_
+  cmd = stri_flatten(c(res$sys.cmd, res$sys.args), collapse = " ") %??%
+    NA_character_
   exit.code = res$exit.code %??% NA_integer_
   output = stri_flatten(res$output, "\n") %??% ""
 
-  stopf("%s (exit code %i);\ncmd: '%s'\noutput:\n%s", msg, exit.code, cmd, output)
+  stopf(
+    "%s (exit code %i);\ncmd: '%s'\noutput:\n%s",
+    msg,
+    exit.code,
+    cmd,
+    output
+  )
 }
