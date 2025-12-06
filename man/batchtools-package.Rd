@@ -7,7 +7,7 @@
 \title{batchtools: Tools for Computation on Batch Systems}
 \description{
 For bug reports and feature requests please use the tracker:
-\url{https://github.com/mllg/batchtools}.
+\url{https://github.com/mlr-org/batchtools}.
 }
 \section{Package options}{
 
@@ -30,8 +30,9 @@ loading \pkg{batchtools}.
 \seealso{
 Useful links:
 \itemize{
-  \item \url{https://github.com/mllg/batchtools}
-  \item Report bugs at \url{https://github.com/mllg/batchtools/issues}
+  \item \url{https://github.com/mlr-org/batchtools}
+  \item \url{https://batchtools.mlr-org.com}
+  \item Report bugs at \url{https://github.com/mlr-org/batchtools/issues}
 }
 
 }

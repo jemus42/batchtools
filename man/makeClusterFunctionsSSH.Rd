@@ -38,7 +38,9 @@ makeClusterFunctionsSSH(list(Worker$new("localhost", ncpus = 2)))
 }
 \seealso{
 Other ClusterFunctions: 
+\code{\link{makeClusterFunctions}()},
 \code{\link{makeClusterFunctionsDocker}()},
+\code{\link{makeClusterFunctionsHyperQueue}()},
 \code{\link{makeClusterFunctionsInteractive}()},
 \code{\link{makeClusterFunctionsLSF}()},
 \code{\link{makeClusterFunctionsMulticore}()},
@@ -46,7 +48,6 @@ Other ClusterFunctions:
 \code{\link{makeClusterFunctionsSGE}()},
 \code{\link{makeClusterFunctionsSlurm}()},
 \code{\link{makeClusterFunctionsSocket}()},
-\code{\link{makeClusterFunctionsTORQUE}()},
-\code{\link{makeClusterFunctions}()}
+\code{\link{makeClusterFunctionsTORQUE}()}
 }
 \concept{ClusterFunctions}

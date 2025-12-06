@@ -38,7 +38,7 @@ Empty Registry where new jobs are created for.}
 Registry. If not explicitly passed, uses the default registry (see \code{\link{setDefaultRegistry}}).}
 }
 \value{
-[\code{\link{data.table}}] with ids of jobs added to \code{target}.
+[\code{\link[data.table]{data.table}}] with ids of jobs added to \code{target}.
 }
 \description{
 This function allows you to create new computational jobs (just like \code{\link{batchMap}} based on the results of
@@ -73,7 +73,7 @@ ijoin(results, unwrap(reduceResultsDataTable(reg = tmp)), by = c(".id" = "job.id
 \seealso{
 Other Results: 
 \code{\link{loadResult}()},
-\code{\link{reduceResultsList}()},
-\code{\link{reduceResults}()}
+\code{\link{reduceResults}()},
+\code{\link{reduceResultsList}()}
 }
 \concept{Results}

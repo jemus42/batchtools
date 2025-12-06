@@ -50,7 +50,9 @@ allocations.
 }
 \seealso{
 Other ClusterFunctions: 
+\code{\link{makeClusterFunctions}()},
 \code{\link{makeClusterFunctionsDocker}()},
+\code{\link{makeClusterFunctionsHyperQueue}()},
 \code{\link{makeClusterFunctionsInteractive}()},
 \code{\link{makeClusterFunctionsLSF}()},
 \code{\link{makeClusterFunctionsMulticore}()},
@@ -58,7 +60,6 @@ Other ClusterFunctions:
 \code{\link{makeClusterFunctionsSGE}()},
 \code{\link{makeClusterFunctionsSSH}()},
 \code{\link{makeClusterFunctionsSlurm}()},
-\code{\link{makeClusterFunctionsSocket}()},
-\code{\link{makeClusterFunctions}()}
+\code{\link{makeClusterFunctionsSocket}()}
 }
 \concept{ClusterFunctions}
