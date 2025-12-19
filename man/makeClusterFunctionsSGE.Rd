@@ -71,6 +71,7 @@ Other ClusterFunctions:
 \code{\link{makeClusterFunctionsLSF}()},
 \code{\link{makeClusterFunctionsMulticore}()},
 \code{\link{makeClusterFunctionsOpenLava}()},
+\code{\link{makeClusterFunctionsProcessx}()},
 \code{\link{makeClusterFunctionsSSH}()},
 \code{\link{makeClusterFunctionsSlurm}()},
 \code{\link{makeClusterFunctionsSocket}()},

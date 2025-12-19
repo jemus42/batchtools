@@ -60,6 +60,7 @@ Other ClusterFunctions:
 \code{\link{makeClusterFunctionsInteractive}()},
 \code{\link{makeClusterFunctionsLSF}()},
 \code{\link{makeClusterFunctionsMulticore}()},
+\code{\link{makeClusterFunctionsProcessx}()},
 \code{\link{makeClusterFunctionsSGE}()},
 \code{\link{makeClusterFunctionsSSH}()},
 \code{\link{makeClusterFunctionsSlurm}()},

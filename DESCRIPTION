@@ -55,6 +55,7 @@ Suggests:
     jsonlite,
     knitr,
     parallelMap,
+    processx,
     ranger,
     rmarkdown,
     rpart,
