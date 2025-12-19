@@ -54,6 +54,7 @@ Suggests:
     future.batchtools,
     jsonlite,
     knitr,
+    mirai,
     parallelMap,
     ranger,
     rmarkdown,
